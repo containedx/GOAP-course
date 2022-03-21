@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class World : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private static readonly World instance = new World();
+    private static WorldStates worldStates;
+
+    static World()
     {
-        
+        worldStates = new WorldStates();
     }
 
-    // Update is called once per frame
-    void Update()
+    private World()
     {
-        
+
+    }
+
+    public static World Instance
+    {
+        get { return instance; }
+    }
+
+    public WorldStates GetWorld()
+    {
+        return world;
     }
 }
