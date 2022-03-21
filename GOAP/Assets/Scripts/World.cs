@@ -24,6 +24,6 @@ public class World : MonoBehaviour
 
     public WorldStates GetWorld()
     {
-        return world;
+        return worldStates;
     }
 }
